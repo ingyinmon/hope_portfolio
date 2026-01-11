@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
-import Podcastaudio from "./podcastaudio";
+import Podcast from "./Podcastaudio";
 import Futures from "./FuturesDesign";
 import Manipulation from "./DesignManipulation";
 import leftArrow from "../assets/left_arrow.png";
@@ -73,7 +73,7 @@ function Design() {
           </div>
         </div>
       </section>
-      <Podcastaudio />
+      <Podcast />
       <Futures />
       <Manipulation />
       <Logo />
