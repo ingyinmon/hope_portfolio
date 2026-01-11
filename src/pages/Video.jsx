@@ -37,7 +37,7 @@ function Video() {
               >
                 <iframe
                   src={videoUrl}
-                  className="w-full h-full pointer-events-none rounded-3xl scale-110 hover:scale-100 transition-transform duration-700"
+                  className="w-full h-full pointer-events-none rounded-3xl scale-110 hover:scale-100 transition-transform duration-700 object-cover"
                   allow="autoplay"
                   allowFullScreen
                 />
