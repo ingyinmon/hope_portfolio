@@ -8,7 +8,7 @@ import Futures from "./FuturesDesign";
 import Manipulation from "./DesignManipulation";
 import leftArrow from "../assets/left_arrow.png";
 import rightArrow from "../assets/right_arrow.png";
-import Logo from "./logo";
+import Logo from "./Logo";
 import SocialDesign from "./SocialDesign";
 import { useNavigate } from "react-router-dom";
 import TextEffects from "./TextEffects";
