@@ -26,9 +26,9 @@ function Home() {
           </p>
           <div>
             <button className="p-3 bg-[#fc0058] rounded-2xl mt-10 hover:bg-pink-800">
-              <a href="/contact" className="text-sm md:text-lg lg:text-lg">
+              <Link to="/contact" className="text-sm md:text-lg lg:text-lg">
                 Contact Me
-              </a>
+              </Link>
             </button>
           </div>
         </div>
