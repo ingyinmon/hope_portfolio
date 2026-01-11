@@ -2,6 +2,7 @@ import black from "../assets/black.mp4";
 import VideoEditing from "./Video";
 import Motion from "./Motion";
 import Design from "./DesignManipulation";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
