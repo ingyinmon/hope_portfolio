@@ -23,8 +23,6 @@ function Contact() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm opacity-80">
                 <div>
                   <p className="uppercase mb-2">Our address</p>
-                  <p>123456 Moscow</p>
-                  <p>Lane Dyuzheva</p>
                   <p>Yangon</p>
                 </div>
 
