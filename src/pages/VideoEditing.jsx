@@ -1,5 +1,5 @@
 import { useParams, useNavigate, useLocation } from "react-router-dom";
-import backarrow from "../assets/backarrow.png";
+import backarrow from "../assets/Backarrow.png";
 
 export const VideoEdits = [
   "https://drive.google.com/file/d/1YxeZ1UcQSFRhpBqxm3Lauudxlp6vxoLd/preview",

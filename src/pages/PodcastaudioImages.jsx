@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import backarrow from "../assets/backarrow.png";
+import backarrow from "../assets/Backarrow.png";
 
 import img1 from "../assets/podcast_audios/freedom_main_poster.webp";
 import img2 from "../assets/podcast_audios/photo_2024-05-25_13-58-46.webp";

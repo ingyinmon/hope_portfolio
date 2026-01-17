@@ -1,6 +1,5 @@
 import { useParams, useNavigate, useLocation } from "react-router-dom";
-import { useState } from "react";
-import backarrow from "../assets/backarrow.png";
+import backarrow from "../assets/Backarrow.png";
 
 import v1 from "../assets/motion_for_portfolio/3d_ball&glowing_torus_technic.mp4";
 import v2 from "../assets/motion_for_portfolio/5_6262742764941743497.mp4";
@@ -8,7 +7,6 @@ import v3 from "../assets/motion_for_portfolio/cosmetic_design1.mp4";
 import v4 from "../assets/motion_for_portfolio/facebook_like_&_follow_animation.mp4";
 import v5 from "../assets/motion_for_portfolio/facebook.mp4";
 import v6 from "../assets/motion_for_portfolio/final_project.mp4";
-// import v7 from "../assets/motion_for_portfolio/future_31_animation.mp4";
 import v8 from "../assets/motion_for_portfolio/glow_text_animation.mp4";
 import v9 from "../assets/motion_for_portfolio/happy_birthday_for_tiktok.mp4";
 import v10 from "../assets/motion_for_portfolio/hope_animation.mp4";
@@ -21,7 +19,6 @@ import v16 from "../assets/motion_for_portfolio/Neon-Text-Animation.mp4";
 import v17 from "../assets/motion_for_portfolio/Render_comp.mp4";
 import v18 from "../assets/motion_for_portfolio/SHE_animation.mp4";
 import v19 from "../assets/motion_for_portfolio/sneaker_ads_motion.mp4";
-// import v20 from "../assets/motion_for_portfolio/song_animation1.mp4";
 import v21 from "../assets/motion_for_portfolio/square_motion_complex.mp4";
 import v22 from "../assets/motion_for_portfolio/text_animation.mp4";
 import v23 from "../assets/motion_for_portfolio/tiktok_showcase.mp4";
@@ -29,7 +26,6 @@ import v24 from "../assets/motion_for_portfolio/video_2025-12-08_20-21-02.mp4";
 import v25 from "../assets/motion_for_portfolio/video_2025-12-08_20-21-37.mp4";
 import v26 from "../assets/motion_for_portfolio/video_2025-12-08_20-21-41.mp4";
 import v27 from "../assets/motion_for_portfolio/video_2025-12-08_20-21-47.mp4";
-// import v28 from "../assets/motion_for_portfolio/viral_song_edit.mp4";
 
 export const videos = [
   v1,
@@ -38,7 +34,6 @@ export const videos = [
   v4,
   v5,
   v6,
-  // v7,
   v8,
   v9,
   v10,
@@ -51,7 +46,6 @@ export const videos = [
   v17,
   v18,
   v19,
-  // v20,
   v21,
   v22,
   v23,
@@ -59,7 +53,6 @@ export const videos = [
   v25,
   v26,
   v27,
-  // v28,
 ];
 
 function MotionVideoes() {
@@ -67,8 +60,6 @@ function MotionVideoes() {
   const navigate = useNavigate();
   const location = useLocation();
   const video = videos[id];
-
-  const [startY, setStartY] = useState(null);
 
   const from = location.state?.from || "/";
 
