@@ -36,9 +36,6 @@ function ImageLogo() {
   const { id } = useParams();
   const navigate = useNavigate();
   const image = images[id];
-
-  const [startY, setStartY] = useState(null);
-
   return (
     <section className="grow relative w-full  bg-black flex flex-col">
       <div

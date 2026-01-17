@@ -1,5 +1,4 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import backarrow from "../assets/Backarrow.png";
 
 import img1 from "../assets/text_effects/844ce169-8980-4cd3-961c-3352991c7001-0.webp";
@@ -18,8 +17,6 @@ function TextEffectsImages() {
   const { id } = useParams();
   const navigate = useNavigate();
   const image = images[id];
-
-  const [startY, setStartY] = useState(null);
 
   return (
     <section className="grow relative w-full  bg-black flex flex-col">
