@@ -29,14 +29,14 @@ function Logo() {
                 spaceBetween: 16,
               },
               640: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 centeredSlides: false,
-                spaceBetween: 16,
+                spaceBetween: 18,
               },
               1024: {
                 slidesPerView: 5,
                 centeredSlides: false,
-                spaceBetween: 24,
+                spaceBetween: 15,
               },
             }}
             className="h-full px-2 sm:px-10 lg:px-10"
@@ -59,10 +59,10 @@ function Logo() {
             ))}
           </Swiper>
           <div className="custom-prev absolute top-1/2 left-7 -translate-y-1/2 cursor-pointer z-50">
-            <img src={leftArrow} alt="prev" className="w-7 h-10" />
+            <img src={leftArrow} alt="prev" className="w-13 h-13" />
           </div>
           <div className="custom-next absolute top-1/2 right-7 -translate-y-1/2 cursor-pointer z-50">
-            <img src={rightArrow} alt="next" className="w-7 h-10" />
+            <img src={rightArrow} alt="next" className="w-13 h-13" />
           </div>
         </div>
       </section>

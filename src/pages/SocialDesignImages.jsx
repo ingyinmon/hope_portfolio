@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import backarrow from "../assets/backarrow.png";
 
 import img1 from "../assets/social/img1.webp";
 import img2 from "../assets/social/img2.webp";
@@ -26,34 +27,6 @@ import img22 from "../assets/social/img22.webp";
 import img23 from "../assets/social/img23.webp";
 import img24 from "../assets/social/img24.webp";
 import img25 from "../assets/social/img25.webp";
-// import img26 from "../assets/social/img26.webp";
-// import img27 from "../assets/social/img27.webp";
-// import img28 from "../assets/social/img28.webp";
-// import img29 from "../assets/social/img29.webp";
-// import img30 from "../assets/social/img30.webp";
-// import img31 from "../assets/social/img31.webp";
-// import img32 from "../assets/social/img32.webp";
-// import img33 from "../assets/social/img33.webp";
-// import img34 from "../assets/social/img34.webp";
-// import img35 from "../assets/social/img35.webp";
-// import img36 from "../assets/social/img36.webp";
-// import img37 from "../assets/social/img37.webp";
-// import img38 from "../assets/social/img38.webp";
-// import img39 from "../assets/social/img39.webp";
-// import img40 from "../assets/social/img40.webp";
-// import img41 from "../assets/social/img41.webp";
-// import img42 from "../assets/social/img42.webp";
-// import img43 from "../assets/social/img43.webp";
-// import img44 from "../assets/social/img44.webp";
-// import img45 from "../assets/social/img45.webp";
-// import img46 from "../assets/social/img46.webp";
-// import img47 from "../assets/social/img47.webp";
-// import img48 from "../assets/social/img48.webp";
-// import img49 from "../assets/social/img49.webp";
-// import img50 from "../assets/social/img50.webp";
-// import img51 from "../assets/social/img51.webp";
-// import img52 from "../assets/social/img52.webp";
-// import img53 from "../assets/social/img53.webp";
 
 export const images = [
   img1,
@@ -81,34 +54,6 @@ export const images = [
   img23,
   img24,
   img25,
-  // img26,
-  // img27,
-  // img28,
-  // img29,
-  // img30,
-  // img31,
-  // img32,
-  // img33,
-  // img34,
-  // img35,
-  // img36,
-  // img37,
-  // img38,
-  // img39,
-  // img40,
-  // img41,
-  // img42,
-  // img43,
-  // img44,
-  // img45,
-  // img46,
-  // img47,
-  // img48,
-  // img49,
-  // img50,
-  // img51,
-  // img52,
-  // img53,
 ];
 
 function SocialDesignImages() {
@@ -119,22 +64,22 @@ function SocialDesignImages() {
   const [startY, setStartY] = useState(null);
 
   return (
-    <div className="grow w-full h-[90vh] bg-black/30 backdrop-blur-md flex items-center justify-center p-4">
-      <img
-        src={image}
-        alt="Design"
-        draggable={false}
-        onMouseDown={(e) => setStartY(e.clientY)}
-        onMouseUp={(e) => {
-          if (e.clientY < startY) {
-            navigate("/design");
-          }
-        }}
-        onTouchStart={(e) => setStartY(e.touches[0].clientY)}
-        onTouchEnd={() => navigate("/design")}
-        className="max-w-full max-h-[70vh] object-contain rounded-2xl shadow-2xl cursor-pointer select-none"
-      />
-    </div>
+    <section className="grow relative w-full  bg-black flex flex-col">
+      <div
+        onClick={() => navigate("/design")}
+        className="h-16 flex items-center px-6 text-white/80 cursor-pointer z-20"
+      >
+        <img src={backarrow} alt="backarrow" className="w-10" />
+        Back
+      </div>
+      <div className="grow w-full h-[80vh] bg-black/30 backdrop-blur-md flex items-center justify-center p-3">
+        <img
+          src={image}
+          alt="Design"
+          className="max-w-full max-h-[70vh] object-contain rounded-2xl shadow-2xl cursor-pointer select-none"
+        />
+      </div>
+    </section>
   );
 }
 

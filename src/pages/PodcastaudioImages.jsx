@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import backarrow from "../assets/backarrow.png";
 
 import img1 from "../assets/podcast_audios/freedom_main_poster.webp";
 import img2 from "../assets/podcast_audios/photo_2024-05-25_13-58-46.webp";
@@ -37,22 +38,22 @@ function PodcastaudioImages() {
   const [startY, setStartY] = useState(null);
 
   return (
-    <div className="w-full min-h-[90smh] bg-black/30 backdrop-blur-md flex items-center justify-center p-3 mt-16 mb-16">
-      <img
-        src={image}
-        alt="Design"
-        draggable={false}
-        onMouseDown={(e) => setStartY(e.clientY)}
-        onMouseUp={(e) => {
-          if (e.clientY < startY) {
-            navigate("/design");
-          }
-        }}
-        onTouchStart={(e) => setStartY(e.touches[0].clientY)}
-        onTouchEnd={() => navigate("/design")}
-        className="max-w-full max-h-[70vh] object-contain rounded-2xl shadow-2xl cursor-pointer select-none"
-      />
-    </div>
+    <section className="grow relative w-full  bg-black flex flex-col">
+      <div
+        onClick={() => navigate("/design")}
+        className="h-16 flex items-center px-6 text-white/80 cursor-pointer z-20"
+      >
+        <img src={backarrow} alt="backarrow" className="w-10" />
+        Back
+      </div>
+      <div className="grow w-full h-[80vh] bg-black/30 backdrop-blur-md flex items-center justify-center p-3">
+        <img
+          src={image}
+          alt="Design"
+          className="max-w-full max-h-[70vh] object-contain rounded-2xl shadow-2xl cursor-pointer select-none"
+        />
+      </div>
+    </section>
   );
 }
 

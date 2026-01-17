@@ -7,7 +7,7 @@ import leftArrow from "../assets/left_arrow.png";
 import rightArrow from "../assets/right_arrow.png";
 import { useNavigate } from "react-router-dom";
 
-function Podcastaudio() {
+function podcastaudio() {
   const navigate = useNavigate();
   return (
     <>
@@ -31,14 +31,14 @@ function Podcastaudio() {
                 spaceBetween: 16,
               },
               640: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 centeredSlides: false,
-                spaceBetween: 16,
+                spaceBetween: 18,
               },
               1024: {
                 slidesPerView: 5,
                 centeredSlides: false,
-                spaceBetween: 24,
+                spaceBetween: 15,
               },
             }}
             className="h-full px-2 sm:px-10 lg:px-10"
@@ -62,10 +62,10 @@ function Podcastaudio() {
           </Swiper>
 
           <div className="podcast-prev absolute top-1/2 left-7 -translate-y-1/2 cursor-pointer z-50">
-            <img src={leftArrow} alt="prev" className="w-7 h-10" />
+            <img src={leftArrow} alt="prev" className="w-13 h-13" />
           </div>
           <div className="podcast-next absolute top-1/2 right-7 -translate-y-1/2 cursor-pointer z-50">
-            <img src={rightArrow} alt="next" className="w-7 h-10" />
+            <img src={rightArrow} alt="next" className="w-13 h-13" />
           </div>
         </div>
       </section>
@@ -73,4 +73,4 @@ function Podcastaudio() {
   );
 }
 
-export default Podcastaudio;
+export default podcastaudio;

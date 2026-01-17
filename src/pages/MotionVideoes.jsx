@@ -1,5 +1,6 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useState } from "react";
+import backarrow from "../assets/backarrow.png";
 
 import v1 from "../assets/motion_for_portfolio/3d_ball&glowing_torus_technic.mp4";
 import v2 from "../assets/motion_for_portfolio/5_6262742764941743497.mp4";
@@ -64,14 +65,24 @@ export const videos = [
 function MotionVideoes() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const video = videos[id];
 
   const [startY, setStartY] = useState(null);
 
+  const from = location.state?.from || "/";
+
   if (!video) return null;
 
   return (
-    <section className=" grow relative w-full min-h-smh overflow-hidden bg-black">
+    <section className=" grow relative w-full min-h-smh bg-black flex flex-col ">
+      <div
+        onClick={() => navigate(from)}
+        className="h-16 flex items-center px-6 text-white/80 cursor-pointer z-20"
+      >
+        <img src={backarrow} alt="backarrow" className="w-10" />
+        Back
+      </div>
       <video
         src={video}
         autoPlay
@@ -90,22 +101,13 @@ function MotionVideoes() {
       />
       <div className="absolute inset-0 bg-black/30" />
 
-      <div className="relative z-10 flex  items-center justify-center w-full h-full p-4 mt-16 mb-16">
+      <div className="relative z-10 flex  items-center justify-center w-full h-full p-4 ">
         <video
           src={video}
           controls
           autoPlay
           muted
           playsInline
-          draggable={false}
-          onMouseDown={(e) => setStartY(e.clientY)}
-          onMouseUp={(e) => {
-            if (startY !== null && startY - e.clientY > 60) {
-              navigate("/motion");
-            }
-          }}
-          onTouchStart={(e) => setStartY(e.touches[0].clientY)}
-          onTouchEnd={() => navigate("/motion")}
           className="
             max-w-full
             max-h-[70vh]

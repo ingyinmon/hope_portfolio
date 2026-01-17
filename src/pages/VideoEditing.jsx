@@ -1,4 +1,5 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
+import backarrow from "../assets/backarrow.png";
 
 export const VideoEdits = [
   "https://drive.google.com/file/d/1YxeZ1UcQSFRhpBqxm3Lauudxlp6vxoLd/preview",
@@ -22,34 +23,33 @@ export const VideoEdits = [
 function VideoEditing() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const videoSrc = VideoEdits[Number(id)];
 
-  if (!videoSrc) {
-    return <div className="text-white text-center mt-40">Video not found</div>;
-  }
+  const from = location.state?.from || "/";
 
   return (
     <section className="grow relative w-full min-h-smh bg-black flex flex-col">
       <div
-        onClick={() => navigate("/video")}
+        onClick={() => navigate(from)}
         className="h-16 flex items-center px-6 text-white/80 cursor-pointer z-20"
       >
-        ← Back
+        <img src={backarrow} alt="backarrow" className="w-10" />
+        Back
       </div>
 
       <div className="flex-1 flex items-center justify-center">
         <iframe
           src={videoSrc}
-          allow="fullscreen"
-          allowFullScreen
+          allow="autoplay; fullscreen; encrypted-media"
           className="
             w-full
             h-[30vh]
             md:w-[70vw]
-            md:h-[65vh]
-            lg:w-[65vw]
-            lg:h-[65vh]
-            p-3
+            md:h-[40vh]
+            lg:w-[80vw]
+            lg:h-[60vh]
+            p-2
             rounded-4xl
             shadow-2xl
             bg-black

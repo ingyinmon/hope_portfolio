@@ -15,21 +15,21 @@ function Footer() {
           ပြီး​တော့လည်းပြီးတာပါပဲ
         </h2>
         <div className="absolute flex gap-10 mt-14">
-          <a href="https://www.tiktok.com/@panadoras?">
+          <a href="https://www.tiktok.com/@panadoras?" target="_blank">
             <img
               src={tiktok}
               alt="tiktok"
               className="w-7 h-7 transition-transform duration-300 hover:scale-125 hover:rotate-12 "
             />
           </a>
-          <a href="https://www.youtube.com/@Wunna-zh8ib">
+          <a href="https://www.youtube.com/@Wunna-zh8ib" target="_blank">
             <img
               src={youtube}
               alt="youtube"
               className="w-7 h-7 transition-transform duration-300 hover:scale-125 hover:rotate-12"
             />
           </a>
-          <a href="https://www.facebook.com/share/1QSsD3EkVQ/">
+          <a href="https://www.facebook.com/share/1QSsD3EkVQ/" target="_blank">
             <img
               src={fb}
               alt="facebook"

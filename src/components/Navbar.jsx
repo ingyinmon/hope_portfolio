@@ -9,12 +9,12 @@ function Navbar() {
 
   return (
     <>
-      <div className="w-full h-[70px]">
+      <div className="w-full h-[70px] flex justify-center items-center">
         <nav className="fixed w-full  h-[70px]  flex justify-around items-center bg-black/60 backdrop-blur-sm text-white z-50">
           <img src={logo} alt="Logo" className="w-30 h-30" />
           <button
             onClick={toggleMenu}
-            className="cursor-pointer text-xl lg:hidden z-50"
+            className="cursor-pointer text-4xl lg:hidden z-50"
           >
             &#8801;
           </button>
@@ -38,10 +38,10 @@ function Navbar() {
                     className={({ isActive }) =>
                       `block w-full rounded-md px-2 py-2 text-center
            transition-all duration-300 ease-out
-           transform font-bold
+           transform font-bold bg-black
            ${
              isActive
-               ? "bg-[#fc0053] text-white scale-105"
+               ? " text-[#fc0053] scale-105"
                : "text-white hover:bg-[#fc0053]/80 hover:scale-105"
            }
            active:scale-95`

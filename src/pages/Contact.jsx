@@ -1,17 +1,21 @@
+import bgVideo from "../assets/universe_astral_motion_showcase.gif.mp4";
+
 function Contact() {
   return (
     <>
       <section className="grow relative w-full min-h-screen bg-[#1b1b1b] flex items-center justify-center px-6 py-6">
         <div className="relative w-full  rounded-3xl overflow-hidden shadow-2xl bg-black">
-          <div
-            className="absolute inset-0 bg-cover bg-center opacity-60"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1400&q=80')",
-            }}
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-60"
+          >
+            <source src={bgVideo} type="video/mp4" />
+          </video>
 
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 p-10 lg:p-10 text-white">
             <div className="flex flex-col justify-between">
