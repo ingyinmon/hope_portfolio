@@ -14,7 +14,7 @@ function Navbar() {
           <img src={logo} alt="Logo" className="w-30 h-30" />
           <button
             onClick={toggleMenu}
-            className="cursor-pointer text-4xl lg:hidden z-50"
+            className="cursor-pointer text-5xl lg:hidden z-50"
           >
             &#8801;
           </button>
